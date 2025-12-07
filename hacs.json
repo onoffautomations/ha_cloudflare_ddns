@@ -1,0 +1,7 @@
+{
+  "name": "Cloudflare DDNS Updater Home Assistant Integration",
+  "zip_release": true,
+  "filename": "cloudflare_ddns.zip",
+  "homeassistant": "2023.8.0",
+  "render_readme": true
+}
