@@ -3,7 +3,7 @@
   "name": "Cloudflare DDNS",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/yourusername/cloudflare-ddns-ha",
+  "documentation": "https://github.com/onoffautomations/ha_cloudflare_ddns",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": [],
