@@ -1,0 +1,92 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Cloudflare DDNS Setup",
+        "description": "Configure your Cloudflare DDNS settings",
+        "data": {
+          "dns_record": "DNS Record (e.g., ddns.example.com)",
+          "device_name": "Device Name (optional)",
+          "zone_id": "Cloudflare Zone ID",
+          "api_token": "Cloudflare API Token",
+          "what_ip": "IP Type",
+          "proxied": "Enable Cloudflare Proxy",
+          "ttl": "TTL (120-7200 seconds, or 1 for Auto)",
+          "update_interval": "Update Interval (seconds)",
+          "auto_update": "Enable Automatic Updates"
+        },
+        "data_description": {
+          "dns_record": "The DNS A record to update",
+          "device_name": "Custom name for this device (optional, defaults to DNS record)",
+          "zone_id": "Your Cloudflare Zone ID",
+          "api_token": "Cloudflare Zone API Token",
+          "what_ip": "Use internal or external IP address",
+          "proxied": "Route traffic through Cloudflare proxy",
+          "ttl": "Time to live for DNS record (1 for automatic)",
+          "update_interval": "How often to check and update DNS (60 seconds recommended)",
+          "auto_update": "Automatically update DNS when IP changes (can also be controlled via switch)"
+        }
+      },
+      "notifications": {
+        "title": "Notification Settings",
+        "description": "Configure optional notifications",
+        "data": {
+          "notify_telegram": "Enable Telegram Notifications",
+          "telegram_chat_id": "Telegram Chat ID",
+          "telegram_bot_token": "Telegram Bot API Token",
+          "notify_discord": "Enable Discord Notifications",
+          "discord_webhook_url": "Discord Webhook URL"
+        }
+      }
+    },
+    "error": {
+      "invalid_ttl": "TTL must be between 120 and 7200, or 1 for automatic",
+      "internal_cannot_proxy": "Internal IP addresses cannot be proxied through Cloudflare",
+      "cannot_connect": "Failed to connect to Cloudflare API",
+      "invalid_auth": "Invalid API token or Zone ID",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "This DNS record is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cloudflare DDNS Options",
+        "description": "Update your Cloudflare DDNS configuration",
+        "data": {
+          "dns_record": "DNS Record",
+          "device_name": "Device Name",
+          "zone_id": "Cloudflare Zone ID",
+          "api_token": "Cloudflare API Token",
+          "what_ip": "IP Type",
+          "proxied": "Enable Cloudflare Proxy",
+          "ttl": "TTL (seconds)",
+          "update_interval": "Update Interval (seconds)",
+          "auto_update": "Enable Automatic Updates",
+          "notify_telegram": "Enable Telegram Notifications",
+          "telegram_chat_id": "Telegram Chat ID",
+          "telegram_bot_token": "Telegram Bot API Token",
+          "notify_discord": "Enable Discord Notifications",
+          "discord_webhook_url": "Discord Webhook URL"
+        },
+        "data_description": {
+          "dns_record": "The DNS A record to update",
+          "device_name": "Custom name for this device",
+          "zone_id": "Your Cloudflare Zone ID",
+          "api_token": "Cloudflare Zone API Token",
+          "what_ip": "Use internal or external IP address",
+          "proxied": "Route traffic through Cloudflare proxy",
+          "ttl": "Time to live for DNS record (1 for automatic)",
+          "update_interval": "How often to check and update DNS in seconds",
+          "auto_update": "Automatically update DNS when IP changes"
+        }
+      }
+    },
+    "error": {
+      "invalid_ttl": "TTL must be between 120 and 7200, or 1 for automatic",
+      "internal_cannot_proxy": "Internal IP addresses cannot be proxied through Cloudflare"
+    }
+  }
+}
